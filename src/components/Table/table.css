@@ -1,0 +1,43 @@
+.MuiTableRow-root>* {
+    padding: 20px !important;
+}
+
+.MuiTableRow-head th {
+    font-weight: bold !important;
+}
+
+.table td,
+th {
+    border: none !important
+}
+
+.status {
+    padding: 10px;
+    border-radius: 10px;
+    width: 50px;
+}
+
+.details {
+    color: #00b5ff !important;
+}
+
+.table h3 {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1330px) {
+    .table {
+        width: 170%;
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .table {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20rem;
+    }
+}

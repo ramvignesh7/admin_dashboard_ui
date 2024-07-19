@@ -1,0 +1,35 @@
+.mainDash{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+.cardContainer{
+    gap: 10px;
+    width: 100%;
+}
+@media (max-width: 1330px) {
+    .cards {
+        flex-direction: column;
+    }
+    .cardContainer{
+        height: 9rem;
+    }
+    .mainDash {
+        justify-content: flex-start;
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .mainDash {
+        align-items: center;
+    }
+    .cards {
+        width: 90%;
+    }
+    h3{
+        font-size: 25px;
+        margin-bottom: 2rem;
+    }
+}

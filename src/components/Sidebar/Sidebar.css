@@ -1,0 +1,110 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo>img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.logo>span>span {
+    color: var(--pink);
+}
+
+.menu {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menuItems {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    height: 2.5rem;
+    border-radius: 11.2px;
+}
+
+.menuItems:hover {
+    cursor: pointer;
+}
+
+.active {
+    background: var(--activeItem);
+    margin-left: 0;
+}
+
+.active::before {
+    content: '';
+    height: 100%;
+    width: 4px;
+    background: var(--pink);
+    margin-right: calc(1rem - 4px);
+}
+
+.menuItems:last-child {
+    position: absolute;
+    width: 100%;
+    bottom: 2.3rem;
+}
+.bars{
+    display: none;
+}
+@media (max-width: 1330px) {
+
+    .menuItems>span,
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        width: 50%;
+        background: #ffe0e0;
+        height: 100vh;
+        z-index: 9;
+        padding-right: 1rem;
+        left: 0;
+    }
+    .menuItems:last-child{
+        position: relative;
+        top: 4rem;
+    }
+    .menuItems>span, .logo {
+        display: block;
+    }
+    .logo{
+        display: flex;
+    }
+    .bars{
+        position: fixed;
+        z-index: 11;
+        top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffe0e0;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+}
